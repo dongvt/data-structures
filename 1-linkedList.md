@@ -8,11 +8,11 @@ The main difference between a linked list and an Array is how they are store in 
 ### Single liked list
 In the single linked list, the the elements (also called `nodes`) are connected in a linear way. A single node could be represented like the image bellow:
 
-![Node single Linked-List](img/single-linked-list-node.jpg)
+![Node single Linked-List](img/single-linked-list-node.JPG)
 
 The first element (called `head`) point to the next node, and that next node point to the next and so on as represented in the image bellow:
 
-![Single Linked Linked-List](img/single-linked-list.jpg)
+![Single Linked Linked-List](img/single-linked-list.JPG)
 
 The last node in the list will have the next pinter pointing to null
 
@@ -20,11 +20,11 @@ The last node in the list will have the next pinter pointing to null
 In the double linked list the nodes have two pointers and a data value, the additional pointer in the double list points to the prev pointer. 
 Here is a visual representation of a single node:
 
-![Node double Linked-List](img/double-linked-list-node.jpg)
+![Node double Linked-List](img/double-linked-list-node.JPG)
 
 In adition, a double linked list have two aditional pointers, one pointing to the first node (Called the `Head`) an another pointing to the last node (Called the `Tail`). Here a visual representation of a complete double linked list:
 
-![double Linked-List](img/double-linked-list.jpg)
+![double Linked-List](img/double-linked-list.JPG)
 
 ## Designing our own linked list in python
 There is not in build in class for a linked list on python however we can design a class to create a list which behaved like a liked list, in this tutorial we will work with a double linked list since this is the most complete example
