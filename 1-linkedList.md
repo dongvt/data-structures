@@ -315,8 +315,8 @@ The complete example can be found [here](py/linked-list.py), checkout and use th
 
 The linked-list is very practical for other data structures like stacks and queues. A liked list is applied to use a queue on python which we are going to analyze next.
 
-* [Practice challenge 1]()
-* [Practice challenge 2]()
+* [Practice challenge 1](https://leetcode.com/problems/reverse-linked-list/)
+* [Practice challenge 2](https://leetcode.com/problems/middle-of-the-linked-list/)
 
 [Next: Queues](2-queue.md)
 
