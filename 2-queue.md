@@ -126,4 +126,7 @@ while(len(q) > 0):
 return -1
 ```
 __Performance:__ Since, the enqueuing and dequeuing are *O(1)*, and finding neighbor is full of *O(1)* operations, we just worry for the cells we enqueue in dequeue. So the performance is *O(n\*m)* where `n` is the number of rows in the grid and `m` is the number of columns. 
+
+Check the complete solution [here](py/queue.py)
+
 [Back to Welcome Page](0-welcome.md)
