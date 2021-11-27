@@ -121,6 +121,8 @@ If this code is not perfectly clear, take a look to this image:
 
 ![get linked list](img/get-linked-list.gif)
 
+__Performance:__ *O(n)* in the worst case when the value of `index` ins the same as `self.size`
+
 For the `addToHead` function we need to follow this steps:
 1. Create a new node
 2. Set the next pointer from the new node to the current head
@@ -145,6 +147,7 @@ def addAtHead(self, val):
     
     self.size = self.size + 1 #if we have a new node the size increases
 ```
+__Performance:__ *O(4)* one for each step, which can be simplified to *O(1)*
 
 The `addToTail` method will behave similar to `addToHead`. These are the steps:
 1. Create a new node
@@ -170,6 +173,7 @@ def addAtTail(self, val):
 
     self.size = self.size + 1 #size increases when we add a new node to the list
 ```
+__Performance:__ *O(4)* one for each step, which can be simplified to *O(1)*
 
 To add a new node in an specific index we should (it will be inserted *before* the existing node in the given index):
 
@@ -218,6 +222,8 @@ def addAtIndex(self, index, val):
     
     self.size = self.size + 1 #increment our size helper
 ```
+__Performance:__ The worst case is when `index` value is `self.size - 1`, in which case the performance would be *O(n + 5)* where n represent the value on `index`, which simplified would be *O(n)*
+
 The process for the `deleteAtIndex` would consist in just modifying pointers. In python we don't need to delete the node from memory tanks to [garbage collection](https://stackify.com/python-garbage-collection/) which is a kind of a system that would delete the a node if nothing is pointing to it.
 
 We just need to follow these steps:
@@ -273,6 +279,7 @@ def deleteAtIndex(self, index):
     
     self.size = self.size - 1 #This time we decrement since we are deleting elements
 ```
+__Performance:__ The worst case is when `index` value is `self.size - 1`, in which case the performance would be *O(n + 2)* where n represent the value on `index`, which simplified would be *O(n)*
 
 This will create an entire linked-list data structure that we can use easily. However, we can't print its information using the `print` in python. In order to print something in python, we would need to have a method that convert our desired object into an string:
 
