@@ -98,6 +98,7 @@ Here is an illustration:
 What if we want to begin from the leaft at the very left? This is called `Postorder traversal` the definition for postorder traversal is get the subtree at the left before, the subtree at the right and finally visit the root.
 
 Take a look:
+
 ![Postorder Traversal](img/postorder-traversal-tree.gif)
 
 how would you solve it? when you get a silution you can check [here](py/tree-traversal.py) all the traversal solution discused in this tutorial.
