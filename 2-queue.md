@@ -129,4 +129,11 @@ __Performance:__ Since, the enqueuing and dequeuing are *O(1)*, and finding neig
 
 Check the complete solution [here](py/queue.py)
 
+
+[Next: Tree](3-tree.md)
+
+[Prev: Linked List](1-linkedList.md)
+
+
+
 [Back to Welcome Page](0-welcome.md)

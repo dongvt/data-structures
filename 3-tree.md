@@ -264,5 +264,6 @@ Our program is done, we just need to call out backtracking function and return t
 * [113. Path Sum II](https://leetcode.com/problems/path-sum-ii/) (Tree)
 * [39. Combination Sum](https://leetcode.com/problems/combination-sum/) (Recursion)
 
+[Prev: Queues](2-queue.md)
 
 [Back to Welcome Page](0-welcome.md)
