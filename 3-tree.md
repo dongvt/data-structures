@@ -10,16 +10,16 @@ One of the most common `tree` structure is called a `binary tree`. As its name i
 
 >__Note:__ In this tutorial, the examples will work just with binary trees. At the end we will solve a more complex problem to show an example of a different `tree` structure.
 
-In this example the node which value 1 is the `root` of our tree, its childrean are nodes 2 and 3 which at the same time have their own children. That means we can have a `subtree` taking 2 or 3 as our root:
+In this example the node which value 1 is the `root` of our tree, its children are nodes 2 and 3 which at the same time have their own children. That means we can have a `subtree` taking 2 or 3 as our root:
 
 ![sub tree](img/subtree-example-tree.jpg)
 
 In this subtree nodes 4 and 5 are at the end of the tree. This nodes are called `leaf nodes`
 
 ## How do I "*explore*" a tree?
-How can we get all the values in each node of the tree? Since each node is identical, we could potentially use an idential function on each node to get the value. What we do in `trees` is create a single function and then make it call itself. Function that call itself are called *recursive functoins*.
+How can we get all the values in each node of the tree? Since each node is identical, we could potentially use an identical function on each node to get the value. What we do in `trees` is create a single function and then make it call itself. Function that call itself are called *recursive functions*.
 
-Lets see an exaple. First we would need to design our node:
+Lets see an example. First we would need to design our node:
 
 ```python
 class TreeNode(object):
@@ -47,7 +47,7 @@ root.right.right = TreeNode(7)
 
 Now we can create our *recursive function*. When working with this type of functions we should __always__ have a `base case`. A base case is the instruction that will stop the iteration. With no base case our recursive function will fall in an infinite loop.
 
-We just want to the data, so the we will stop the `recursive calls` when we don't have node availble (node is null):
+We just want to the data, so the we will stop the `recursive calls` when we don't have node available (node is null):
 
 ```python
 def printTree(root):
@@ -74,7 +74,7 @@ Now, the result is not perfectly ordered:
 7
 ```
 >### Quick overview of a stack
->This algorithm is the base for `depth first search` algorithm. The informaiton about this algorithm in [wikipedia](hhttps://en.wikipedia.org/wiki/Depth-first_search) says we need to use a `stack`. Indeed, we are using a hidden stack here. Which is a section of the memory where each recursion call is stored and then poped when a function ends. This is a long topic out of the scope of this tutorial. If you are curious check [this](https://www.geeksforgeeks.org/memory-layout-of-c-program/) out.
+>This algorithm is the base for `depth first search` algorithm. The information about this algorithm in [wikipedia](hhttps://en.wikipedia.org/wiki/Depth-first_search) says we need to use a `stack`. Indeed, we are using a hidden stack here. Which is a section of the memory where each recursion call is stored when the function si called and deleted when that function ends. This is a long topic out of the scope of this tutorial. If you are curious check [this](https://www.geeksforgeeks.org/memory-layout-of-c-program/) out.
 
 Continuing with our output the result is just a way we have to `traverse` the tree and the example above is called `preorder traversal`. It is simple to understand, we are just printing all the elements at the root then left of the tree and then the elements at the right, here in illustration:
 
@@ -124,7 +124,7 @@ def levelorderTraversal(root):
 ```
 Note that there is not need of recursion.
 
-__Time and Space complexity__ all the traversal funcitions discused here are *O(n)* where n is the number of nodes in the tree. However in order to traverse the tree we would need to store the entire tree somewhere else (wether the stack or a queue). Thus the space complexity would be *O(n)*.
+__Time and Space complexity__ all the traversal functions discussed here are *O(n)* where n is the number of nodes in the tree. However in order to traverse the tree we would need to store the entire tree somewhere else (wether the stack or a queue). Thus the space complexity would be *O(n)*.
 
 ## Solving problems
 Lets solve this [leetocde](https://leetcode.com/problemset/all/) problem:
@@ -134,21 +134,21 @@ The problem states that we need to find if the left node is a mirror to the righ
 
 ![symetric](img/symetric-sample1-tree.jpg)
 
-See? The left subtree is identical to the tree at the right, the only difference is that they are oposite direction.
+See? The left subtree is identical to the tree at the right, the only difference is that they are opposite direction.
 
-Leetcode also give us an example of what is NOT a symetric tree:
+Leetcode also give us an example of what is NOT a symmetric tree:
 
 ![Symetric](img/symetric-sample2-tree.jpg)
 
-Even when both subtrees are identical here, they are not simtryc since they don't have the numbers sorted in oposite direction as the first example.
+Even when both subtrees are identical here, they are not symmetric since they don't have the numbers sorted in opposite direction as the first example.
 
 Well, this is the solution.
 
 1. Traverse the left subtree inorder traversal and store the nodes in an list
-2. Traversi the right subtree inorder traversal (but from the right node) and store the result in a list
+2. Traverse the right subtree inorder traversal (but from the right node) and store the result in a list
 3. If both resulting list are equal, return true, else return false
 
-To traberse the left tree we just need the in order traversal learned in this tutorial:
+To traverse the left tree we just need the in order traversal learned in this tutorial:
 
 ```python
 def leftTraversal(node, res = []):
@@ -179,13 +179,13 @@ def rightTraversal(node, res = []):
     return res
 ```
 
-We just need to call thos functoins, store the result in two lists and compare the lists to return our value. [Here](py/tree-symetric.py) is the complete solution for this problem.
+We just need to call those functions, store the result in two lists and compare the lists to return our value. [Here](py/tree-symetric.py) is the complete solution for this problem.
 
-Now, is time to go for something more complex. Each time we need to use recursion, we can have an sptract tree contructed. When we have a problem that can be divided in subproblems we can surely use recursion to solve it.
+Now, is time to go for something more complex. Each time we need to use recursion, we can have an abstract tree constructed. When we have a problem that can be divided in sub-problems we can surely use recursion to solve it.
 
 Lets solve this problem. [17. Letter Combinations of a Phone Number](https://leetcode.com/problems/letter-combinations-of-a-phone-number/)
 
->Here I will just give an explaination of the problem, and I will explain the algorithm to be implementd.
+>Here I will just give an explanation of the problem, and I will explain the algorithm to be implemented.
 
 This is the problem:
 
@@ -205,11 +205,11 @@ So, this are the examples:
 >
 >__Output:__ ["a","b","c"]
 
-In class we learned about the maze problem, we needed to find the path from the top left corner to the botton right corner. For this porpuse we needed to use a backtracking algorithm. The easy explaination for backtracking is: check if a path works and if it does not, backtrack and try another path.
+In class we learned about the maze problem, we needed to find the path from the top left corner to the bottom right corner. For this purpose we needed to use a backtracking algorithm. The easy explanation for backtracking is: check if a path works and if it does not, backtrack and try another path.
 
-Wikipedia can give us a complete explaination for [backtracking](https://en.wikipedia.org/wiki/Backtracking)
+Wikipedia can give us a complete explanation for [backtracking](https://en.wikipedia.org/wiki/Backtracking)
 
-in this problem, each result is a *posible path* between one cell (in this case the digit) and the next one, in the firt example we have 9 possible results. We can visualize it this way:
+in this problem, each result is a *possible path* between one cell (in this case the digit) and the next one, in the first example we have 9 possible results. We can visualize it this way:
 
 ![result](img/phone-result-visual1-tree.jpg)
 
@@ -232,7 +232,7 @@ letters = {
 }
 ```
 
-next we will need to create our backtracking functoin:
+next we will need to create our backtracking function:
 
 ```python
 res = [] #we need a place to store the result
@@ -244,13 +244,13 @@ def backtrack(index,path):
     
     digit_letters = letters[digits[index]] #Get the letter list from the current digit
     
-    for letter in digit_letters: # iterate thorugh the letter list
+    for letter in digit_letters: # iterate through the letter list
         path.append(letter) #try the current letter
         backtrack(index + 1, path) #increment the index to go to the next digit
         path.pop() #backtrack
 ```
 
-Our program is done, we just need to call out backtcking function and return the result:
+Our program is done, we just need to call out backtracking function and return the result:
 
 ```python
     backtrack(0,[])

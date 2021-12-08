@@ -22,7 +22,7 @@ Here is a visual representation of a single node:
 
 ![Node double Linked-List](img/double-linked-list-node.JPG)
 
-In adition, a double linked list have two aditional pointers, one pointing to the first node (Called the `Head`) an another pointing to the last node (Called the `Tail`). Here a visual representation of a complete double linked list:
+In addition, a double linked list have two additional pointers, one pointing to the first node (Called the `Head`) an another pointing to the last node (Called the `Tail`). Here a visual representation of a complete double linked list:
 
 ![double Linked-List](img/double-linked-list.JPG)
 
@@ -93,7 +93,7 @@ class Node:
 ```
 We got the data and store into `val`, by default the previous and next pointers will be `None`
 
-The constructor will have set our tail and head pointers to `None`, in adition we will set a `size` as helper for other functions
+The constructor will have set our tail and head pointers to `None`, in addition we will set a `size` as helper for other functions
 
 ```python
 def __init__(self):
@@ -187,7 +187,7 @@ To add a new node in an specific index we should (it will be inserted *before* t
 Here is a visualization:
 ![get linked list](img/add-index-linked-list.gif)
 
-Aditionally, we have some special cases to handle:
+Additionally, we have some special cases to handle:
 
 * What would happen if `index` is 0?
 * What would happen if `index` is greater than the current size
@@ -309,7 +309,7 @@ Now, our `__str__` function would not work since `self` is not iterable. So, to 
 ```python
 def __iter__(self):
     """
-    Iterate foward through the Linked List
+    Iterate forward through the Linked List
     [Taken from CSE 212 class]
     """
     curr = self.head  # Start at the begining since this is a forward iteration.
